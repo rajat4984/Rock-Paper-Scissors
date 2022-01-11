@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #efefef;
+  background-color: #362222;
+  font-family: "Odibee Sans", cursive;
+}
+
+#header {
+  padding: 3% 15%;
+  text-align: center;
+  background-color: #b3541e;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#header > h1 {
+  font-size: 50px;
+  background-color: #b3541e;
+}
+
+#content {
+  background-color: #362222;
+  padding: 5% 15%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons > p {
+  border: 3px white solid;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5%;
+  font-size: 3em;
+  transition: 0.3s;
+}
+
+.buttons > p:hover {
+  border: 3px black solid;
+}
+
+.score {
+  padding: 5% 15%;
+  text-align: center;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.name > p {
+  font-size: 35px;
+  margin-left: 20px;
+}
+
+.score-num{
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.footer{
+    padding: 4%;
+    text-align: center;
+    background-color:#12122e
+}
+
+.footer > p{
+    background-color: #12122e;
+}

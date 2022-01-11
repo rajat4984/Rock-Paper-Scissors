@@ -29,15 +29,15 @@ const results = (player, computer) => {
 
 let i = 0;
 
-while (i < 5) {
-  let compOptionNum = Math.floor(Math.random() * 3);
-  const compOption = getCompOption(compOptionNum);
-  let playerOption = prompt("Enter your option");
+// while (i < 5) {
+//   let compOptionNum = Math.floor(Math.random() * 3);
+//   const compOption = getCompOption(compOptionNum);
+//   let playerOption = prompt("Enter your option");
 
-  let newPlayerOption = playerOption.toLocaleLowerCase();
-  playerOption = newPlayerOption[0].toUpperCase() + newPlayerOption.substring(1);
-  console.log(playerOption);
-  console.log(compOption);
-  console.log(results(playerOption, compOption));
-  i++;
-}
+//   let newPlayerOption = playerOption.toLocaleLowerCase();
+//   playerOption = newPlayerOption[0].toUpperCase() + newPlayerOption.substring(1);
+//   console.log(playerOption);
+//   console.log(compOption);
+//   console.log(results(playerOption, compOption));
+//   i++;
+// }
