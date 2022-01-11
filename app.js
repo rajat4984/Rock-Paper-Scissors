@@ -1,7 +1,13 @@
 // ---------------Global variables-----------------------------
 
 let options = ["Rock", "Paper", "Scissors"];
-let answer;
+let computerScoreElement = document.querySelector(".computer-score");
+let playerScoreElement = document.querySelector(".player-score");
+let computerScore = Number(
+  document.querySelector(".computer-score").textContent
+);
+let playerScore = Number(document.querySelector(".player-score").textContent);
+let buttons = document.querySelectorAll(".buttons");
 
 // ---------------Functions-----------------------------
 
@@ -17,27 +23,35 @@ const results = (player, computer) => {
     (player === "Paper" && computer === "Rock") ||
     (player === "Scissors" && computer === "Paper")
   ) {
+    playerScore++;
+    playerScoreElement.textContent = playerScore;
     return "Player wins";
   } else if (
     (player === "Rock" && computer === "Paper") ||
     (player === "Paper" && computer === "Scissors") ||
     (player === "Scissors" && computer === "Rock")
   ) {
+    computerScore++;
+    computerScoreElement.textContent = computerScore;
     return "Computer wins";
   }
 };
 
-let i = 0;
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    let playerOption = e.target.className;
+    if (computerScore === 5 || playerScore === 5) {
+      e.disabled = true;
+    } else {
+      playGround(playerOption);
+    }
+  });
+});
 
-// while (i < 5) {
-//   let compOptionNum = Math.floor(Math.random() * 3);
-//   const compOption = getCompOption(compOptionNum);
-//   let playerOption = prompt("Enter your option");
-
-//   let newPlayerOption = playerOption.toLocaleLowerCase();
-//   playerOption = newPlayerOption[0].toUpperCase() + newPlayerOption.substring(1);
-//   console.log(playerOption);
-//   console.log(compOption);
-//   console.log(results(playerOption, compOption));
-//   i++;
-// }
+const playGround = (playerOption) => {
+  let compOptionNum = Math.floor(Math.random() * 3);
+  const compOption = getCompOption(compOptionNum);
+  console.log(playerOption);
+  console.log(compOption);
+  console.log(results(playerOption, compOption));
+};

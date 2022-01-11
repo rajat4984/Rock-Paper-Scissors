@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   color: #efefef;
-  background-color: #362222;
   font-family: "Odibee Sans", cursive;
 }
 
@@ -51,7 +50,8 @@
   justify-content: space-around;
 }
 
-.buttons > p {
+.buttons > button {
+  background-color: #362222;
   border: 3px white solid;
   border-radius: 10px;
   cursor: pointer;
@@ -60,7 +60,7 @@
   transition: 0.3s;
 }
 
-.buttons > p:hover {
+.buttons > button:hover {
   border: 3px black solid;
 }
 
@@ -100,16 +100,17 @@
   background-color: #12122e;
 }
 
-.left-side-image,.inverted-image{
-    background-color: #b3541e;
-    width: 100px;
-    height: 100px;
+.left-side-image,
+.inverted-image {
+  background-color: #b3541e;
+  width: 100px;
+  height: 100px;
 }
 
-.left-side-image{
-    float: left;
+.left-side-image {
+  float: left;
 }
 
-.inverted-image{
-    float: right;
+.inverted-image {
+  float: right;
 }
