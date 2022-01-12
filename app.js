@@ -21,8 +21,8 @@ const getCompOption = (num) => {
 
 const results = (player, computer) => {
   if (player === computer) {
-    winnerTextElement.textContent = "Its a draw"
-    winnerTextElement.style.color = "yellow"
+    winnerTextElement.textContent = "Its a draw";
+    winnerTextElement.style.color = "yellow";
     console.log("Its a draw");
   } else if (
     (player === "Rock" && computer === "Scissors") ||
@@ -30,10 +30,10 @@ const results = (player, computer) => {
     (player === "Scissors" && computer === "Paper")
   ) {
     playerScore++;
-    winnerTextElement.textContent = `${player} beats ${computer} , well done `
-    winnerTextElement.style.color = "green"
+    winnerTextElement.textContent = `${player} beats ${computer} , well done `;
+    winnerTextElement.style.color = "green";
     playerScoreElement.textContent = playerScore;
-    
+
     console.log("player won");
   } else if (
     (player === "Rock" && computer === "Paper") ||
@@ -41,8 +41,8 @@ const results = (player, computer) => {
     (player === "Scissors" && computer === "Rock")
   ) {
     computerScore++;
-    winnerTextElement.textContent = `${computer} beats ${player} , oh no `
-    winnerTextElement.style.color = "red"
+    winnerTextElement.textContent = `${computer} beats ${player} , oh no `;
+    winnerTextElement.style.color = "red";
     computerScoreElement.textContent = computerScore;
     console.log("Computer won");
   }
@@ -59,10 +59,10 @@ buttons.forEach((button) => {
 const checkWinner = () => {
   if (computerScore === 5) {
     let winnerText = "Computer won the game";
-    willPlayAgain(winnerText,"red");
+    willPlayAgain(winnerText, "red");
   } else if (playerScore === 5) {
     let winnerText = "You won the game";
-    willPlayAgain(winnerText,"green");
+    willPlayAgain(winnerText, "green");
   } else {
     return true;
   }
@@ -72,16 +72,14 @@ const playGround = (playerOption) => {
   let compOptionNum = Math.floor(Math.random() * 3);
   const compOption = getCompOption(compOptionNum);
   console.log(playerOption);
-  if (checkWinner()) {
-    results(playerOption, compOption);
-  }
+  checkWinner();
+  results(playerOption, compOption);
 };
 
-const willPlayAgain = (winnerText,color) => {
+const willPlayAgain = (winnerText, color) => {
   popupText.textContent = winnerText;
-  popupText.style.color = color
+  popupText.style.color = color;
   popup.style.display = "block";
-
 };
 
 popupButton.addEventListener("click", () => {
@@ -89,11 +87,12 @@ popupButton.addEventListener("click", () => {
   resetGame();
 });
 
+//RESET GAME
 const resetGame = () => {
   playerScore = 0;
   computerScore = 0;
   playerScoreElement.textContent = playerScore;
   computerScoreElement.textContent = computerScore;
-  winnerTextElement.textContent = "Lets start the game"
-  winnerTextElement.style.color = "white"
+  winnerTextElement.textContent = "Lets start the game";
+  winnerTextElement.style.color = "white";
 };

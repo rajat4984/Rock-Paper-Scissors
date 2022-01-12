@@ -7,20 +7,25 @@
   
 }
 
+/* ------------------HEADER------------------------- */
+
 #header {
-  padding: 3% 15%;
+  padding: 2% 15%;
   text-align: center;
+  background: rgb(80, 78, 78);
 }
 
 #header > h1 {
+  text-align: center;
   font-size: 50px;
+  background: rgb(80, 78, 78);
 }
+
+/* ---------------------------CONTENT----------------------- */
 
 #content {
-  padding: 5% 15%;
+  padding: 3% 15%;
 }
-
-
 
 .buttons {
   display: flex;
@@ -71,26 +76,7 @@
   text-align: center;
 }
 
-#footer {
-  padding: 1%;
-  text-align: center;
-}
-
-
-
-.left-side-image,
-.inverted-image {
-  width: 100px;
-  height: 100px;
-}
-
-.left-side-image {
-  float: left;
-}
-
-.inverted-image {
-  float: right;
-}
+/* ----------------------------POPUP------------------------ */
 
 #pop-up {
   display: none;
@@ -107,7 +93,7 @@
 
 .pop-up-content{
   position: fixed;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%) ;
   border: 3px solid black;
@@ -137,4 +123,32 @@
   color: black;
 }
 
-@media scre
+/* --------------------MEDIA QUERIES------------------ */
+
+@media screen and (max-width:480px){
+  #header > h1 {
+    margin-top: 20px;
+    font-size:20px;
+  }
+  .name{
+    display: block;
+  }
+  .name > p{
+    font-size: 25px;
+    text-align: center;
+    width: 210px;
+  }
+
+  .buttons > button{
+    margin-left: 10px;
+  }
+
+  .buttons{
+    margin: 10px;
+  }
+  .winner-text{
+    font-size: 15px;
+  }
+}
+
+
