@@ -2,48 +2,25 @@
   margin: 0;
   padding: 0;
   color: #efefef;
+  background-color: rgb(27, 27, 27) ;
   font-family: "Odibee Sans", cursive;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  
 }
 
 #header {
   padding: 3% 15%;
   text-align: center;
-  background-color: #b3541e;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
 }
 
 #header > h1 {
   font-size: 50px;
-  background-color: #b3541e;
 }
 
 #content {
-  background-color: #362222;
   padding: 5% 15%;
 }
+
+
 
 .buttons {
   display: flex;
@@ -51,7 +28,6 @@
 }
 
 .buttons > button {
-  background-color: #362222;
   border: 3px white solid;
   border-radius: 10px;
   cursor: pointer;
@@ -62,6 +38,7 @@
 
 .buttons > button:hover {
   border: 3px black solid;
+  background-color: white;
 }
 
 .score {
@@ -78,7 +55,6 @@
 
 .name > p {
   font-size: 35px;
-  margin-left: 20px;
 }
 
 .score {
@@ -90,19 +66,20 @@
   margin-top: 10px;
 }
 
-.footer {
-  padding: 3%;
+.winner-text{
+  font-size: 20px;
   text-align: center;
-  background-color: #12122e;
 }
 
-.footer > p {
-  background-color: #12122e;
+#footer {
+  padding: 1%;
+  text-align: center;
 }
+
+
 
 .left-side-image,
 .inverted-image {
-  background-color: #b3541e;
   width: 100px;
   height: 100px;
 }
@@ -114,3 +91,50 @@
 .inverted-image {
   float: right;
 }
+
+#pop-up {
+  display: none;
+  font-size: 30px;
+  position: fixed;
+  z-index: 1;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0); 
+  background: rgba(78, 78, 78, 0.4); 
+}
+
+.pop-up-content{
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%) ;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 4%;
+  align-items: center;
+  box-shadow: 10px 10px 10px  black;
+}
+
+.pop-up-content > button{
+  font-size: 20px;
+  color: black;
+  color: white;
+  border: 3px solid black;
+  width: 160px;
+  padding: 3%;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.pop-up-content > button:hover{
+  background-color: #efefef;
+  color: black;
+}
+
+@media scre

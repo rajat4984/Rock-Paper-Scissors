@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <title>Rock Paper Scissors</title>
     <script src="app.js" defer></script>
   </head>
@@ -26,15 +28,23 @@
             <button class="Scissors">✌</button>
         </div>
         <div class="score">
-            <div class="name">
-                <p>Player - Computer</p>
-            </div>
             <p class="score-num"><span class="player-score">0</span> - <span class="computer-score">0</span></p>
+            <div class="name">
+              <p>Player - Computer</p>
+          </div>
+            <p class="winner-text">Lets start the game</p>
         </div>
     </div>
-
-    <div class="footer">
+    <!-- <hr>
+    <div id="footer">
         <p>Copyright © Rajat</p>
+    </div> -->
+
+    <div id="pop-up">
+      <div class="pop-up-content">
+        <p class="pop-up-text">Game finished</p>
+        <button class="pop-up-button">play again?</button>
+      </div>
     </div>
 
     </div>
